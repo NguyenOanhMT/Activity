@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Activity</string>
+    <string name="hello">Hello again."\n"Welcome back.</string>
+    <string name="hello_sign_up">Hello!"\n"Sign up to get started.</string>
+</resources>
