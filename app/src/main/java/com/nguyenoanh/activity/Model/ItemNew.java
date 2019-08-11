@@ -1,4 +1,4 @@
-package com.nguyenoanh.activity;
+package com.nguyenoanh.activity.Model;
 
 public class ItemNew {
     String username;
@@ -6,15 +6,15 @@ public class ItemNew {
     String content;
     String price;
 
-    int avatar;
+    int profileImage;
     int image;
 
-    public ItemNew(String username, String time, String content, String price, int avatar, int image) {
+    public ItemNew(String username, String time, String content, String price, int profileImage, int image) {
         this.username = username;
         this.time = time;
         this.content = content;
         this.price = price;
-        this.avatar = avatar;
+        this.profileImage = profileImage;
         this.image = image;
     }
 
@@ -53,12 +53,12 @@ public class ItemNew {
         this.price = price;
     }
 
-    public int getAvatar() {
-        return avatar;
+    public int getProfileImage() {
+        return profileImage;
     }
 
-    public void setAvatar(int avatar) {
-        this.avatar = avatar;
+    public void setProfileImage(int profileImage) {
+        this.profileImage = profileImage;
     }
 
     public int getImage() {

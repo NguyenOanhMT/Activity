@@ -1,4 +1,4 @@
-package com.nguyenoanh.activity;
+package com.nguyenoanh.activity.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.nguyenoanh.activity.R;
 
 public class SignIn extends AppCompatActivity {
     Button btnSignIn;
@@ -19,7 +21,7 @@ public class SignIn extends AppCompatActivity {
         btnSignIn.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignIn.this, New.class);
+                Intent intent = new Intent(SignIn.this, NewFeed.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

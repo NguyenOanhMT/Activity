@@ -1,4 +1,4 @@
-package com.nguyenoanh.activity;
+package com.nguyenoanh.activity.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.nguyenoanh.activity.Model.ItemNew;
+import com.nguyenoanh.activity.R;
 
 import java.util.ArrayList;
 
@@ -35,15 +38,14 @@ public class ItemNewAdapter extends RecyclerView.Adapter<ItemNewAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
         ItemNew itemNew = new ItemNew ();
-//        holder.profileImage.setImageDrawable (context.getResources ().getDrawable (itemNew.getAvatar ()));
 
         holder.tvName.setText (itemNew.getUsername ());
         holder.tvTime.setText (itemNew.getTime ());
         holder.tvContent.setText (itemNew.getContent ());
         holder.tvPrice.setText (itemNew.getPrice ());
 
-        holder.profileImage.setImageDrawable(context.getResources().getDrawable(itemNew.getAvatar ()));
-        holder.image.setImageDrawable(context.getResources().getDrawable(itemNew.getImage()));
+        holder.profileImage.setImageResource (itemNew.getProfileImage ());
+        holder.image.setImageResource (itemNew.getImage());
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -56,7 +58,7 @@ public class ItemNewAdapter extends RecyclerView.Adapter<ItemNewAdapter.ViewHold
             super (itemView);
 
             profileImage = (CircleImageView) itemView.findViewById (R.id.imv_profile);
-            image = (ImageView) itemView.findViewById (R.id.imv);
+            image = (ImageView) itemView.findViewById (R.id.image);
 
             tvName = (TextView) itemView.findViewById (R.id.tv_name);
             tvTime = (TextView) itemView.findViewById (R.id.tv_time);

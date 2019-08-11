@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:layout_margin="15dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -19,8 +19,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imv_profile"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:src="@color/colorPrimary" />
 
             <LinearLayout
@@ -34,14 +34,17 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@color/dark_blue_grey"
+                    android:text="Martin Palmer" />
 
                 <TextView
                     android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2h 30" />
+                    android:textSize="10sp"
+                    android:textColor="@color/dark_blue_grey"
+                    android:text="Today, 03:24 PM" />
             </LinearLayout>
             <ImageView
                 android:id="@+id/dots"
@@ -59,22 +62,25 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/hello_sign_up" />
+            android:textSize="13sp"
+            android:textColor="@color/dark_blue_grey"
+            android:lineSpacingExtra="4sp"
+            android:text="What is the loop of Creation? How is there something from nothing? In spite of the fact that it is impossible to prove that anythin…."/>
 
         <ImageView
-            android:id="@+id/imv"
+            android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/anh" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <CheckBox
@@ -99,7 +105,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:textStyle="bold"
-                android:text="3000$" />
+                android:textSize="15sp"
+                android:textColor="@color/dark_blue_grey"
+                android:gravity="end"
+                android:text="$340.00" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
