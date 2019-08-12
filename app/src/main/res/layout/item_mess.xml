@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="80dp">
 
@@ -10,6 +9,16 @@
         android:layout_centerVertical="true"
         android:layout_width="50dp"
         android:layout_height="50dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_online_offline"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignBottom="@+id/imv_avatar"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toStartOf="@+id/linear"
+        android:src="@color/colorAccent"/>
     <LinearLayout
         android:id="@+id/linear"
         android:paddingLeft="10dp"
@@ -19,12 +28,14 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/imv_avatar">
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textColor="@color/darkish_pink"
             android:text="Vernon Bradley" />
         <TextView
+            android:id="@+id/tv_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="13sp"
@@ -50,7 +61,7 @@
             android:textSize="13sp" />
 
         <TextView
-            android:id="@+id/time"
+            android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/number_mess"
@@ -65,6 +76,6 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary" />
+        android:background="#585353" />
 
 </RelativeLayout>

@@ -46,14 +46,13 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imv_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_plus"
         app:layout_constraintEnd_toEndOf="@+id/imv_profile"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imv_profile"
-        app:layout_constraintTop_toTopOf="@+id/imv_profile"
-        android:src="@drawable/ic_plus" />
+        app:layout_constraintTop_toTopOf="@+id/imv_profile" />
 
     <TextView
         android:id="@+id/tv_full_name"
@@ -70,6 +69,7 @@
         style="@style/TextStyle18"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#f2f3fa"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -93,6 +93,7 @@
         style="@style/TextStyle18"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#f2f3fa"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -115,6 +116,7 @@
         style="@style/TextStyle18"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#f2f3fa"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -147,7 +149,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
     <TextView
-        android:id="@+id/tv_sign"
+        android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextStyle23"
@@ -182,4 +184,12 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/tv_sign_up"
         app:srcCompat="@drawable/ic_glitters" />
+
+    <ImageView
+        android:id="@+id/imv_bottom_blog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_bottom_blob" />
 </androidx.constraintlayout.widget.ConstraintLayout>

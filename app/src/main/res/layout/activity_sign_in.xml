@@ -67,7 +67,7 @@
         android:id="@+id/edt_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#B7B7C4"
+        android:backgroundTint="#f2f3fa"
         android:ems="10"
         style="@style/TextStyle18"
         android:hint="Input email"
@@ -91,7 +91,7 @@
         android:id="@+id/edt_pass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#B7B7C4"
+        android:backgroundTint="#f2f3fa"
         android:ems="10"
         style="@style/TextStyle18"
         android:hint="Input password"
@@ -132,7 +132,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="27dp"
         style="@style/TextStyle22"
-        android:text="New to Friendly Desi? "
+        android:text="New to Friendly Design? "
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
 
@@ -147,6 +147,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_new_friendly"
         app:layout_constraintStart_toEndOf="@+id/tv_new_friendly"
         app:layout_constraintTop_toTopOf="@+id/tv_new_friendly" />
+
+    <ImageView
+        android:id="@+id/imv_bottom_blog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_bottom_blob" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEnd"

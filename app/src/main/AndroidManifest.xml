@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.NewFeed"
-            android:label="@string/title_activity_new_feed">
+            android:name=".Activity.SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +18,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.SignIn"
-            android:parentActivityName=".Activity.SignUp" />
-        <activity android:name=".New" />
+            android:name=".Activity.SignUp"
+            android:parentActivityName=".Activity.SignIn" />
+        <activity android:name=".Activity.NewFeed" />
+        <activity android:name=".Activity.Message"></activity>
     </application>
 
 </manifest>

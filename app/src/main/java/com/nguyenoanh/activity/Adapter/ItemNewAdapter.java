@@ -44,8 +44,8 @@ public class ItemNewAdapter extends RecyclerView.Adapter<ItemNewAdapter.ViewHold
         holder.tvContent.setText (itemNew.getContent ());
         holder.tvPrice.setText (itemNew.getPrice ());
 
-        holder.profileImage.setImageResource (itemNew.getProfileImage ());
-        holder.image.setImageResource (itemNew.getImage());
+//        holder.profileImage.setImageResource (itemNew.getProfileImage ());
+//        holder.image.setImageResource (itemNew.getImage());
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

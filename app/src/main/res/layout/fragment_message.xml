@@ -9,6 +9,7 @@
     <RelativeLayout
         android:id="@+id/title_home"
         android:layout_width="match_parent"
+        android:paddingBottom="10dp"
         android:layout_height="70dp">
         <TextView
             android:layout_width="wrap_content"
@@ -32,6 +33,7 @@
         android:id="@+id/recycler_view_message"
         android:layout_width="match_parent"
         android:layout_below="@+id/title_home"
+        android:background="#fbfcfe"
         android:layout_height="match_parent">
     </androidx.recyclerview.widget.RecyclerView>
 

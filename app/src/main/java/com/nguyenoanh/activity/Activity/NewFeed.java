@@ -1,67 +1,52 @@
 package com.nguyenoanh.activity.Activity;
 
 import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.nguyenoanh.activity.Fragment.HomeFragment;
-import com.nguyenoanh.activity.Fragment.MessageFragment;
+import com.nguyenoanh.activity.Adapter.ItemNewAdapter;
+import com.nguyenoanh.activity.Model.ItemNew;
 import com.nguyenoanh.activity.R;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
+import java.util.ArrayList;
 
 public class NewFeed extends AppCompatActivity {
-    private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener () {
+    RecyclerView recyclerView;
+    ArrayList<ItemNew> listNew;
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectFragment = null;
-            switch (item.getItemId ()) {
-                case R.id.icon_home:
-                    selectFragment = new HomeFragment ();
-                    break;
-                case R.id.icon_message:
-                    selectFragment = new MessageFragment ();
-                    break;
-                case R.id.icon_plus:
-                    mTextMessage.setText (R.string.title_notifications);
-                    break;
-                case R.id.icon_ring:
-                    mTextMessage.setText (R.string.title_notifications);
-                    break;
-                case R.id.icon_profile:
-                    mTextMessage.setText (R.string.title_notifications);
-                    break;
-            }
-            getSupportFragmentManager ().beginTransaction ().replace (R.id.fragment_container,
-                    selectFragment);
-            return true;
-        }
-    };
+    ItemNewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_new_feed);
 
-        BottomNavigationView bottomNav = findViewById (R.id.navigation);
-        Menu a = bottomNav.getMenu();
-        MenuItem b = a.findItem(R.id.imv_profile);
+        recyclerView = (RecyclerView) findViewById (R.id.recycler_view_home);
 
+        listNew = new ArrayList<> ();
 
-        bottomNav.setOnNavigationItemSelectedListener (mOnNavigationItemSelectedListener);
+        recyclerView.setHasFixedSize (true);
+        recyclerView.setItemAnimator(new DefaultItemAnimator ());
+        LinearLayoutManager layoutManager = new LinearLayoutManager ( getApplicationContext ());
+        recyclerView.setLayoutManager (layoutManager);
 
-        getSupportFragmentManager ().beginTransaction ().replace (R.id.fragment_container,
-                new HomeFragment ()).commit ();
+        ItemNew itemNew1 = new ItemNew ("Alice","Today, 2m30 ago", "The recycler view library adds the RecyclerView class. This class provides support for the RecyclerView widget",
+                "$3000", R.drawable.anh, R.drawable.anh1 );
+        ItemNew itemNew2 = new ItemNew ("Alice","Today, 2m30 ago",  null,
+                "$3000", R.drawable.anh, R.drawable.anh1 );
+        ItemNew itemNew3 = new ItemNew ("Alice","Today, 2m30 ago",  null,
+                "$3000", R.drawable.anh, R.drawable.anh2 );
 
+        listNew.add(itemNew1);
+        listNew.add(itemNew2);
+        listNew.add(itemNew3);
+        listNew.add(itemNew2);
+        listNew.add(itemNew1);
+
+        adapter = new ItemNewAdapter (getApplicationContext (), listNew);
+        recyclerView.setAdapter (adapter);
     }
-
 }
