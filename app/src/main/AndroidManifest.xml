@@ -11,6 +11,16 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.SignIn">
+            <intent-filter android:label="@string/forgot_password">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "https://www.google.com/" -->
+                <data android:scheme="http"
+                    android:host="www.google.com"
+                    android:pathPrefix="/action" />
+            </intent-filter>
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
