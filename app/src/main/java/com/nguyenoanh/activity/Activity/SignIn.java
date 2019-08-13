@@ -58,17 +58,17 @@ public class SignIn extends AppCompatActivity {
                 String pass = edtPass.getText().toString();
 
                 //check email and pass if true to activity NewFeed, false still at SignIn
-                if(email.equals ("meocon.on90@gmail.com") && pass.equals ("12345678")){
+//                if(email.equals ("meocon.on90@gmail.com") && pass.equals ("12345678")){
                     Intent intent = new Intent(SignIn.this, NewFeed.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
-                    finish();
-                }else {
-                    Toast.makeText(SignIn.this, "Login failed", Toast.LENGTH_SHORT).show();
-                }
+//                }else {
+//                    Toast.makeText(SignIn.this, "Login failed", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
+        //listener event click button SingUp
         tvSignUp = (TextView) findViewById (R.id.tv_sign_up);
         tvSignUp.setOnClickListener (new View.OnClickListener () {
             @Override
@@ -76,7 +76,6 @@ public class SignIn extends AppCompatActivity {
                 Intent intent = new Intent(SignIn.this, SignUp.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
             }
         });
     }

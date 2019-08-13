@@ -37,7 +37,7 @@ public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
-        ItemUser itemNew = new ItemUser ();
+        ItemUser itemNew = listUser.get (i);
 
         holder.userName.setText (itemNew.getUsername ());
         holder.time.setText (itemNew.getTime ());
@@ -46,10 +46,12 @@ public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHo
 
         holder.imageAvatar.setImageResource (itemNew.getImvAvatar ());
         holder.imageAction.setImageResource (itemNew.getActionUser ());
+
+        holder.backgroundNumberMess.setImageResource (itemNew.getImageNumber ());
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        CircleImageView imageAvatar;
+        CircleImageView imageAvatar, backgroundNumberMess;
         ImageView imageAction;
 
         TextView userName, time, numberMess, message;
@@ -63,6 +65,7 @@ public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHo
 
             imageAvatar = (CircleImageView) itemView.findViewById (R.id.imv_avatar);
             imageAction = (ImageView) itemView.findViewById (R.id.user_online_offline);
+            backgroundNumberMess = (CircleImageView) itemView.findViewById (R.id.background_number_mess);
         }
     }
 

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
     android:layout_margin="15dp">
 
     <LinearLayout
@@ -87,9 +90,9 @@
                 android:id="@+id/cbx_like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_001_heart"
-                android:button="@null"
-                android:checked="false"/>
+                android:background="@drawable/ic_like"
+                android:checked="false"
+                android:button="@null"/>
 
             <ImageView
                 android:id="@+id/comment"

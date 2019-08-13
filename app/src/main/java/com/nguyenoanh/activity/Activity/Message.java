@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.nguyenoanh.activity.Adapter.ItemUserAdapter;
 import com.nguyenoanh.activity.Model.ItemUser;
@@ -17,6 +20,8 @@ public class Message extends AppCompatActivity {
     ArrayList<ItemUser> listUser;
 
     ItemUserAdapter adapter;
+
+    ImageView imvHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +36,11 @@ public class Message extends AppCompatActivity {
         listUser = new ArrayList<> ();
 
         ItemUser itemNew1 = new ItemUser ("Alice","What your name?", "2 : 50m PM", "3",
-                R.drawable.anh, R.drawable.anh1 , 0 );
-        ItemUser itemNew2 = new ItemUser ("Alice","What your name?", "2 : 50m PM", "3",
-                R.drawable.anh, R.drawable.anh1 , 0 );
-        ItemUser itemNew3 = new ItemUser ("Alice","What your name?", "2 : 50m PM", "3",
-                R.drawable.anh, R.drawable.anh1 , 0 );
+                R.drawable.anh2, R.color.colorAccent , R.drawable.background_number_mess );
+        ItemUser itemNew2 = new ItemUser ("Alex","How old are you?", "2 : 50m PM", null,
+                R.drawable.anh1, R.color.colorAccent , 0 );
+        ItemUser itemNew3 = new ItemUser ("Json","I wait for school. You remember ... ", "2 : 50m PM", null,
+                R.drawable.anh, 0 , 0 );
 
         listUser.add(itemNew1);
         listUser.add(itemNew2);
@@ -46,5 +51,14 @@ public class Message extends AppCompatActivity {
         adapter = new ItemUserAdapter (getApplicationContext (), listUser);
         recyclerView.setAdapter (adapter);
 
+        imvHome = (ImageView) findViewById (R.id.imv_home);
+        imvHome.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (Message.this, NewFeed.class);
+                intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity (intent);
+            }
+        });
     }
 }

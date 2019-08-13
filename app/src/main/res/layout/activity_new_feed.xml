@@ -45,7 +45,14 @@
         android:id="@+id/recycler_view_home"
         android:layout_width="match_parent"
         android:layout_below="@+id/title_home"
-        android:layout_height="match_parent">
+        android:layout_above="@+id/menu_bottom"
+        android:layout_height="wrap_content">
     </androidx.recyclerview.widget.RecyclerView>
+
+    <include
+        android:id="@+id/menu_bottom"
+        layout="@layout/menu_bottom_newfeed"
+        android:layout_alignParentBottom="true"
+        tools:ignore="IncludeLayoutParam" />
 
 </RelativeLayout>

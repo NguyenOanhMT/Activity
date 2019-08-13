@@ -1,6 +1,10 @@
 package com.nguyenoanh.activity.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import com.nguyenoanh.activity.Adapter.ItemNewAdapter;
 import com.nguyenoanh.activity.Model.ItemNew;
 import com.nguyenoanh.activity.R;
@@ -18,6 +22,8 @@ public class NewFeed extends AppCompatActivity {
     ArrayList<ItemNew> listNew;
 
     ItemNewAdapter adapter;
+
+    ImageView imvMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +44,7 @@ public class NewFeed extends AppCompatActivity {
         ItemNew itemNew2 = new ItemNew ("Alice","Today, 2m30 ago",  null,
                 "$3000", R.drawable.anh, R.drawable.anh1 );
         ItemNew itemNew3 = new ItemNew ("Alice","Today, 2m30 ago",  null,
-                "$3000", R.drawable.anh, R.drawable.anh2 );
+                "$3000", R.drawable.anh, 0 );
 
         listNew.add(itemNew1);
         listNew.add(itemNew2);
@@ -48,5 +54,17 @@ public class NewFeed extends AppCompatActivity {
 
         adapter = new ItemNewAdapter (getApplicationContext (), listNew);
         recyclerView.setAdapter (adapter);
+
+
+        imvMessage = (ImageView) findViewById (R.id.imv_message);
+        imvMessage.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (NewFeed.this, Message.class);
+                intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity (intent);
+            }
+        });
+
     }
 }

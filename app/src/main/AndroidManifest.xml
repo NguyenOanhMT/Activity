@@ -9,29 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Activity.SignIn">
-            <intent-filter android:label="@string/forgot_password">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "https://www.google.com/" -->
-                <data android:scheme="http"
-                    android:host="www.google.com"
-                    android:pathPrefix="/action" />
-            </intent-filter>
 
+        <activity
+            android:name=".Activity.SignIn"
+            android:parentActivityName=".Activity.NewFeed">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activity.SignUp"
             android:parentActivityName=".Activity.SignIn" />
         <activity android:name=".Activity.NewFeed" />
         <activity android:name=".Activity.Message"></activity>
     </application>
-
 </manifest>
