@@ -1,6 +1,8 @@
 package com.nguyenoanh.activity.Model;
 
-public class ItemUser {
+import java.io.Serializable;
+
+public class ItemUser implements Serializable {
     String username;
     String message;
     String time;

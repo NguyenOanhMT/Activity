@@ -60,18 +60,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         style="@style/TextStyle19"
-        android:text="FULL NAME"
+        android:text="@string/full_name"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/imv_profile" />
 
     <EditText
         android:id="@+id/edt_name"
         style="@style/TextStyle18"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:backgroundTint="#f2f3fa"
+        android:backgroundTint="@color/white_two"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintHorizontal_bias="1.0"
@@ -84,18 +84,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
-        android:text="EMAIL ADDRESS"
+        android:text="@string/email_address"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/edt_name" />
 
     <EditText
         android:id="@+id/edt_email"
         style="@style/TextStyle18"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:backgroundTint="#f2f3fa"
+        android:backgroundTint="@color/white_two"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -107,18 +107,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
-        android:text="PASSWORD"
+        android:text="@string/pass"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/edt_email" />
 
     <EditText
         android:id="@+id/edt_pass"
         style="@style/TextStyle18"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:backgroundTint="#f2f3fa"
+        android:backgroundTint="@color/white_two"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -128,10 +128,10 @@
         android:id="@+id/btn_sign_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="@dimen/dp45"
         android:background="@drawable/background_button"
         style="@style/TextStyle21"
-        android:text="Sign up"
+        android:text="@string/sign_up"
         android:gravity="center_vertical|center"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -144,7 +144,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="48dp"
-        android:text="Already have an account? "
+        android:text="@string/already_have_an_account"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
@@ -158,7 +158,25 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tv_already"
         app:layout_constraintTop_toTopOf="@+id/tv_already"
-        android:text="Sign in" />
+        android:text="@string/sign_in" />
+
+    <ImageView
+        android:id="@+id/imv_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up"
+        app:srcCompat="@drawable/ic_glitters" />
+
+    <ImageView
+        android:id="@+id/imv_bottom_blog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_bottom_blob" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineStart"
@@ -173,23 +191,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.97"/>
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up"
-        app:srcCompat="@drawable/ic_glitters" />
-
-    <ImageView
-        android:id="@+id/imv_bottom_blog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_bottom_blob" />
 </androidx.constraintlayout.widget.ConstraintLayout>

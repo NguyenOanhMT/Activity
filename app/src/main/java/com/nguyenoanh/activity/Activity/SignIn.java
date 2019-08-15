@@ -60,7 +60,7 @@ public class SignIn extends AppCompatActivity {
                 //check email and pass if true to activity NewFeed, false still at SignIn
 //                if(email.equals ("meocon.on90@gmail.com") && pass.equals ("12345678")){
                     Intent intent = new Intent(SignIn.this, NewFeed.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
 //                }else {
 //                    Toast.makeText(SignIn.this, "Login failed", Toast.LENGTH_SHORT).show();

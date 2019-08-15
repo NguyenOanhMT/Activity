@@ -5,13 +5,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="5dp"
-    android:layout_margin="15dp">
+    app:cardCornerRadius="@dimen/dp5"
+    app:cardElevation="@dimen/dp5"
+    android:layout_margin="9dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/dp5"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -22,32 +23,32 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imv_profile"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="@dimen/dp32"
+                android:layout_height="@dimen/dp32"
                 android:src="@color/colorPrimary" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp10"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp15"
                     android:textColor="@color/dark_blue_grey"
-                    android:text="Martin Palmer" />
+                    android:text="@string/martin_palmer" />
 
                 <TextView
                     android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/sp10"
                     android:textColor="@color/dark_blue_grey"
-                    android:text="Today, 03:24 PM" />
+                    android:text="@string/today_03_24_pm" />
             </LinearLayout>
             <ImageView
                 android:id="@+id/dots"
@@ -62,28 +63,28 @@
             android:id="@+id/tv_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
-            android:paddingBottom="10dp"
-            android:textSize="13sp"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:textSize="@dimen/sp13"
             android:textColor="@color/dark_blue_grey"
             android:lineSpacingExtra="4sp"
-            android:text="What is the loop of Creation? How is there something from nothing? In spite of the fact that it is impossible to prove that anythin…."/>
+            android:text="@string/content"/>
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="@dimen/dp50"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/dp10"
             android:src="@drawable/anh" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="@dimen/dp50"
             android:orientation="horizontal">
 
             <CheckBox
@@ -98,8 +99,8 @@
                 android:id="@+id/comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp50"
                 android:src="@drawable/ic_003_comment_1" />
 
             <TextView
@@ -108,10 +109,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:textStyle="bold"
-                android:textSize="15sp"
+                android:textSize="@dimen/sp15"
                 android:textColor="@color/dark_blue_grey"
                 android:gravity="end"
-                android:text="$340.00" />
+                android:text="@string/_340_00" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

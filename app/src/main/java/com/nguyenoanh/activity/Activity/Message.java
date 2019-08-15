@@ -35,18 +35,22 @@ public class Message extends AppCompatActivity {
 
         listUser = new ArrayList<> ();
 
-        ItemUser itemNew1 = new ItemUser ("Alice","What your name?", "2 : 50m PM", "3",
+
+        ItemUser itemUser1 = new ItemUser (getResources ().getString (R.string.martin_palmer),getResources ().getString(R.string.what_your_name),
+                getResources ().getString (R.string._5_45_pm), getResources ().getString(R.string._3),
                 R.drawable.anh2, R.color.colorAccent , R.drawable.background_number_mess );
-        ItemUser itemNew2 = new ItemUser ("Alex","How old are you?", "2 : 50m PM", null,
+        ItemUser itemUser2 = new ItemUser (getResources ().getString(R.string.alex),getResources ().getString(R.string.how_old_are_you),
+                getResources ().getString (R.string._5_45_pm), null,
                 R.drawable.anh1, R.color.colorAccent , 0 );
-        ItemUser itemNew3 = new ItemUser ("Json","I wait for school. You remember ... ", "2 : 50m PM", null,
+        ItemUser itemUser3 = new ItemUser (getResources ().getString(R.string.json),getResources ().getString(R.string.i_wait),
+                getResources ().getString (R.string._5_45_pm), null,
                 R.drawable.anh, 0 , 0 );
 
-        listUser.add(itemNew1);
-        listUser.add(itemNew2);
-        listUser.add(itemNew3);
-        listUser.add(itemNew2);
-        listUser.add(itemNew1);
+        listUser.add(itemUser1);
+        listUser.add(itemUser2);
+        listUser.add(itemUser3);
+        listUser.add(itemUser2);
+        listUser.add(itemUser1);
 
         adapter = new ItemUserAdapter (getApplicationContext (), listUser);
         recyclerView.setAdapter (adapter);

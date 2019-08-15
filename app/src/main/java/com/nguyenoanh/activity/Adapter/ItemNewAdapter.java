@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nguyenoanh.activity.Activity.Message;
-import com.nguyenoanh.activity.Activity.NewFeed;
 import com.nguyenoanh.activity.Model.ItemNew;
+import com.nguyenoanh.activity.Model.ItemUser;
 import com.nguyenoanh.activity.R;
 
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class ItemNewAdapter extends RecyclerView.Adapter<ItemNewAdapter.ViewHold
         TextView tvName, tvTime, tvContent, tvPrice;
         ItemUserAdapter adapter;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull final View itemView) {
             super (itemView);
 
             itemView.setOnClickListener (this);
@@ -72,14 +72,14 @@ public class ItemNewAdapter extends RecyclerView.Adapter<ItemNewAdapter.ViewHold
             tvContent = (TextView) itemView.findViewById (R.id.tv_content);
             tvPrice = (TextView) itemView.findViewById (R.id.tv_price);
 
-            profileImage.setOnClickListener (new View.OnClickListener () {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent (context, Message.class);
-                    intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity (intent);
-                }
-            });
+//            profileImage.setOnClickListener (new View.OnClickListener () {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent (context, Message.class);
+//                    intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    context.startActivity (intent);
+//                }
+//            });
         }
 
         @Override
@@ -87,9 +87,9 @@ public class ItemNewAdapter extends RecyclerView.Adapter<ItemNewAdapter.ViewHold
         }
     }
 
-    public interface onClickListner{
-
-    }
+//    public interface onClickListner{
+//
+//    }
     @Override
     public int getItemCount() {
         return listNew.size ();

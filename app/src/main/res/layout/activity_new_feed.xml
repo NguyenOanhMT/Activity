@@ -8,10 +8,11 @@
 
     <RelativeLayout
         android:id="@+id/title_home"
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="@dimen/dp70">
         <LinearLayout
-            android:paddingStart="20dp"
+            android:paddingStart="@dimen/dp20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -19,17 +20,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/dark_blue_grey"
-                android:text="All Categories"
-                android:drawablePadding="5dp"
+                style="@style/TextStyle17"
+                android:text="@string/all_categories"
+                android:drawablePadding="@dimen/dp5"
                 android:drawableEnd="@drawable/ic_rectangle"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="@dimen/sp14"
                 android:textColor="@color/dark_blue_grey"
-                android:text="Chicago, IL 60611, USA"/>
+                android:text="@string/chicago"/>
         </LinearLayout>
         <ImageView
             android:id="@+id/search"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:paddingEnd="20dp"
+            android:paddingEnd="@dimen/dp20"
             android:src="@drawable/ic_search"/>
     </RelativeLayout>
 
@@ -46,8 +46,7 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/title_home"
         android:layout_above="@+id/menu_bottom"
-        android:layout_height="wrap_content">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"/>
 
     <include
         android:id="@+id/menu_bottom"

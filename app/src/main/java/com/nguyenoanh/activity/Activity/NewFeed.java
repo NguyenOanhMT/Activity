@@ -39,19 +39,22 @@ public class NewFeed extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager ( getApplicationContext ());
         recyclerView.setLayoutManager (layoutManager);
 
-        ItemNew itemNew1 = new ItemNew ("Alice","Today, 2m30 ago", "The recycler view library adds the RecyclerView class. This class provides support for the RecyclerView widget",
-                "$3000", R.drawable.anh, R.drawable.anh1 );
-        ItemNew itemNew2 = new ItemNew ("Alice","Today, 2m30 ago",  null,
-                "$3000", R.drawable.anh, R.drawable.anh1 );
-        ItemNew itemNew3 = new ItemNew ("Alice","Today, 2m30 ago",  null,
-                "$3000", R.drawable.anh, 0 );
+        ItemNew itemNew1 = new ItemNew (getResources ().getString(R.string.alice),getResources ().getString (R.string.today_03_24_pm),
+                getResources ().getString (R.string.content), getResources ().getString (R.string._340_00),
+                R.drawable.anh, R.drawable.anh1 );
+        ItemNew itemNew2 = new ItemNew (getResources ().getString(R.string.json),getResources ().getString (R.string.today_03_24_pm),
+                null,  getResources ().getString (R.string._340_00),
+                R.drawable.anh, R.drawable.anh1 );
+        ItemNew itemNew3 = new ItemNew (getResources ().getString(R.string.martin_palmer),getResources ().getString (R.string.today_03_24_pm),
+                null, getResources ().getString (R.string._340_00),
+                R.drawable.anh, 0 );
 
         listNew.add(itemNew1);
         listNew.add(itemNew2);
         listNew.add(itemNew3);
         listNew.add(itemNew2);
         listNew.add(itemNew1);
-
+        
         adapter = new ItemNewAdapter (getApplicationContext (), listNew);
         recyclerView.setAdapter (adapter);
 
