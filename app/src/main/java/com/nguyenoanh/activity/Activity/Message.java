@@ -15,6 +15,8 @@ import com.nguyenoanh.activity.R;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Message extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<ItemUser> listUser;
@@ -22,6 +24,7 @@ public class Message extends AppCompatActivity {
     ItemUserAdapter adapter;
 
     ImageView imvHome;
+    CircleImageView avatar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +36,10 @@ public class Message extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager (getApplicationContext ());
         recyclerView.setLayoutManager (layoutManager);
 
+        avatar = (CircleImageView) findViewById (R.id.imv_avatar);
         listUser = new ArrayList<> ();
 
-
-        ItemUser itemUser1 = new ItemUser (getResources ().getString (R.string.martin_palmer),getResources ().getString(R.string.what_your_name),
+        ItemUser itemUser1 = new ItemUser (getResources ().getString (R.string.martin_palmer), getResources ().getString(R.string.what_your_name),
                 getResources ().getString (R.string._5_45_pm), getResources ().getString(R.string._3),
                 R.drawable.anh2, R.color.colorAccent , R.drawable.background_number_mess );
         ItemUser itemUser2 = new ItemUser (getResources ().getString(R.string.alex),getResources ().getString(R.string.how_old_are_you),

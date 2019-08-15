@@ -1,6 +1,8 @@
 package com.nguyenoanh.activity.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.nguyenoanh.activity.Activity.NewFeed;
 import com.nguyenoanh.activity.Model.ItemUser;
 import com.nguyenoanh.activity.R;
 
@@ -18,6 +21,7 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHolder> {
+
     private Context context;
     private ArrayList<ItemUser> listUser;
 
@@ -66,6 +70,13 @@ public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHo
             imageAvatar = (CircleImageView) itemView.findViewById (R.id.imv_avatar);
             imageAction = (ImageView) itemView.findViewById (R.id.user_online_offline);
             backgroundNumberMess = (CircleImageView) itemView.findViewById (R.id.background_number_mess);
+
+//            Intent intent = Intent.getIntent ();
+//
+//            if (intent != null) {
+//                Bundle bundle = intent.getBundleExtra (ItemNewAdapter.BUNDLE);
+//                imageAvatar.setImageResource (bundle.getInt (ItemNewAdapter.DRAWABLE));
+//            }
         }
     }
 

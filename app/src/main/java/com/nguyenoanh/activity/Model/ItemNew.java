@@ -1,15 +1,23 @@
 package com.nguyenoanh.activity.Model;
 
+import android.graphics.drawable.Drawable;
+
 public class ItemNew {
+    public enum ItemType {
+        ONE_ITEM, TWO_ITEM, THREE_ITEM;
+    }
+
     String username;
     String time;
     String content;
     String price;
 
     int profileImage;
-    int image;
+    Drawable image;
 
-    public ItemNew(String username, String time, String content, String price, int profileImage, int image) {
+    ItemType itemType;
+
+    public ItemNew(String username, String time, String content, String price, int profileImage, Drawable image) {
         this.username = username;
         this.time = time;
         this.content = content;
@@ -61,11 +69,19 @@ public class ItemNew {
         this.profileImage = profileImage;
     }
 
-    public int getImage() {
+    public Drawable getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(Drawable image) {
         this.image = image;
+    }
+
+    public ItemType getItemType() {
+        return itemType;
+    }
+
+    public void setItemType(ItemType itemType) {
+        this.itemType = itemType;
     }
 }
